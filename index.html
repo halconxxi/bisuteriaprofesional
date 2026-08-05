@@ -84,10 +84,7 @@
     overflow:hidden;
   }
   .hero .wrap{
-    display:grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap:48px;
-    align-items:center;
+    display:block;
   }
   .hero h1{
     font-size:clamp(2.1rem, 4.6vw, 3.4rem);
@@ -118,6 +115,18 @@
     font-size:0.78rem; font-weight:700; line-height:1.3;
   }
   .badge-float span{display:block; font-size:1.35rem; color:var(--amber-deep); font-family:'Fraunces', serif; font-weight:600;}
+
+  /* ---------- foto ancha después de la franja verde ---------- */
+  .wide-photo{
+    aspect-ratio:16/9;
+    max-height:420px;
+    background:linear-gradient(160deg, var(--amber), var(--blush));
+    border-radius:20px;
+    overflow:hidden;
+    position:relative;
+    box-shadow:0 20px 40px rgba(0,0,0,0.18);
+  }
+  .wide-photo img{width:100%; height:100%; object-fit:cover;}
 
   /* ---------- buttons ---------- */
   .cta-btn{
@@ -337,18 +346,13 @@
       <div class="video-grid">
         <!-- VIDEO 1: pega aquí tu iframe de TikTok o YouTube -->
         <div class="video-slot">
-         <iframe title="vimeo-player" src="https://player.vimeo.com/video/758284557?h=a1fe946313" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
+          <iframe title="vimeo-player" src="https://player.vimeo.com/video/758284557?h=a1fe946313" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
         </div>
         <!-- VIDEO 2 -->
         <div class="video-slot">
           <iframe title="vimeo-player" src="https://player.vimeo.com/video/670328284?h=221544c288" width="640" height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
         </div>
       </div>
-    </div>
-
-    <div class="hero-photo">
-      <img src="https://cohety.com/wp-content/uploads/2024/09/como-comenzar-un-negocio-de-bisuteria-artesanal-con-poco-dinero-y-con-poco-tiempo.png" alt="Pieza de bisutería terminada">
-      <div class="badge-float">Acceso<span>de por vida</span></div>
     </div>
   </div>
 </section>
@@ -361,6 +365,16 @@
     <div class="proof-item"><strong>16h</strong>de clases en video HD</div>
     <div class="proof-item"><strong>100%</strong>online, a tu ritmo</div>
     <div class="proof-item"><strong>7 días</strong>de garantía</div>
+  </div>
+</section>
+
+<!-- ===================== FOTO ANCHA ===================== -->
+<section style="padding-top:56px;">
+  <div class="wrap">
+    <div class="wide-photo">
+      <img src="https://cohety.com/wp-content/uploads/2024/09/como-comenzar-un-negocio-de-bisuteria-artesanal-con-poco-dinero-y-con-poco-tiempo.png" alt="Pieza de bisutería terminada">
+      <div class="badge-float">Acceso<span>de por vida</span></div>
+    </div>
   </div>
 </section>
 
@@ -434,7 +448,7 @@
     <!-- Reemplaza estos 3 espacios con testimonios REALES de tus propias clientas. No inventes reseñas. -->
     <div class="testi-grid">
       <div class="testi-card">
-        <div class="stars">★★★★★</div>
+         <div class="stars">★★★★★</div>
         <p>"Durante mucho tiempo estuve buscando una forma de obtener ingresos extra para mi esposo y finalmente encontré una que realmente funciona y lo mejor super sencillo."</p>
         <div class="who">— Ana Monteiro, Bogotá</div>
       </div>
@@ -442,11 +456,6 @@
         <div class="stars">★★★★★</div>
         <p>"Muy bueno y profesional este programa de bisutería. 🥰💍 "</p>
         <div class="who">— Linet Ramos, Quito</div>
-      </div>
-      <div class="testi-card">
-        <div class="stars">★★★★★</div>
-        <p>"Pensé que era mentira, pero ya he logrado abrir mi nuevo emprendimiento con mi hija desde mi casa, estamos muy contentas, gracias Elizabeth 🙂"</p>
-        <div class="who">— Natty Franco, Madrid</div>
       </div>
     </div>
   </div>
@@ -458,8 +467,8 @@
     <span class="eyebrow" style="color:var(--blush);">Oferta por tiempo limitado</span>
     <h2 style="color:var(--paper); margin-top:10px;">Empieza hoy tu camino en bisutería</h2>
     <div class="price-card">
-      <span class="eyebrow">50% De Descuento</span>
-      <div class="price-big">$47USD</div>
+      <span class="eyebrow">Acceso completo</span>
+      <div class="price-big">$95</div>
       <div class="price-note">Pago único · acceso de por vida · válido para todos los países</div>
       <ul class="price-list">
         <li>17 técnicas de bisutería paso a paso</li>
